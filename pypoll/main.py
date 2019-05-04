@@ -1,10 +1,14 @@
 #ppoll challenge
 #import data
 
+# A Note To The T/A Grading This:
+# I did not spend my time on this one. 
+# There's no way it works. But the psuedo code is there. ..kind of 
+
 import os
 import csv
 
-OfficialCount = os.path.join(".." "desktop" "python-challenge","pypoll","election-data.csv")
+OfficialCount = os.path.join("election-data.csv")
 
 
 # Open & read the file, skip the header
@@ -15,13 +19,27 @@ with open(OfficialCount, newline="") as votes_csv:
     #set up a library of candidates
     Candidates = ("Khan","Correy","Li","O'Tooley")
 
+    #and variables for counting, totaling votes
+    Khan_votes = 0
+    Correy_votes = 0
+    Li_votes =0
+    OTooley_votes =0
+
+
     #count total votes
     for row in Votes_csv
         Overall = row+1[2]+row[2]
 
     #count candidate votes
-    for candidates in Votes_csv:
-        votes_rec = row[2]+row+1[2]
+    for candidates in csvreader:
+        if row[2]=="Khan":
+            Khan_votes=Khan_votes +1
+            elif row[2]=="Correy":
+                Correy_votes = Correy_votes +1
+            elif row[2]=="Li"
+                Li_votes = Li_votes+1
+            elif row[2]=="O'Tooley"
+                OTooley_votes = OTooley_votes +1
 
     #calc percentage of votes
     for candidates in Votes_csv:
